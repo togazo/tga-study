@@ -1,0 +1,4 @@
+<h1 id="list-top">イベント一覧（最新順）</h1>
+<ul>
+    {% assign descend_list = site.articles | sort:"title" | reverse %}{% for article in descend_list %}<li><a href="#{{article.title}}">{{article.eventname}}</a></li>{% endfor %}
+</ul>
