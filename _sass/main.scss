@@ -1,0 +1,120 @@
+$base-col: #d0eebb;
+$base-sub-col:#88bb22;
+$base-font-size: 14pt;
+$base-font-col: #444;
+
+*{margin: 0;padding: 0;
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+         -o-box-sizing: border-box;
+        -ms-box-sizing: border-box;
+            box-sizing: border-box;
+    font-family: 'Noto Sans JP', sans-serif;font-size:$base-font-size;color:$base-font-col; }
+ul,ol{list-style-position:inside;padding-left: 0.5em;}
+li{ padding-left: 1em; text-indent: -1em;}
+h1,h2,h3,h4{ font-family: "M PLUS Rounded 1c";}
+h1{ font-size: $base-font-size * 1.75;}
+h2{ font-size: $base-font-size * 1.4;}
+h3{ font-size: $base-font-size * 1.15;}
+h5{ font-size: $base-font-size * 0.85;}
+h6{ font-size: $base-font-size * 0.7;}
+small{font-size:$base-font-size *0.75;color: lighten($base-font-col,20%); }
+
+header.page-header{
+    padding: $base-font-size ($base-font-size *2);
+    background-color: $base-col;
+
+    h1{margin-bottom: $base-font-size;}
+    h4{font-weight:normal;font-size: 0.8em; width:90%;}
+}
+
+.container{width:90%; margin: 0 auto;}
+
+.articles{
+    float: left;
+    width: 60%;
+    padding:0 ($base-font-size *2);
+}
+
+.sidemenu{
+    float: right;
+    width: 40%;
+    padding:$base-font-size ($base-font-size *2);
+
+    h1{font-size:$base-font-size *1.2; color:darken($base-sub-col,10%);}
+    li{font-size: ($base-font-size *0.8); line-height: 1.4;}
+}
+
+article{
+    margin: ($base-font-size *2) 0;
+    header{
+      border-left: 12px solid $base-col;
+      border-bottom: 4px solid $base-col;
+      padding: ($base-font-size *0.25) ($base-font-size *0.5);
+      margin: 0 0 $base-font-size;
+
+      h1{
+          font-size: $base-font-size * 1.4;
+          a{font-size: $base-font-size * 1.4;}
+
+          &.subtitle,&.subtitle a{
+           font-size: $base-font-size *0.9;font-weight:normal;
+          }
+      }
+      h4{
+          font-size: $base-font-size * 0.85;
+          font-weight: normal;
+          color:$base-sub-col;
+      }
+    }
+
+    section{
+        h2{
+          padding: 0 0.25em 0 0.5em;
+          border-bottom: 4px double #ccc;
+          margin-bottom: $base-font-size;
+          font-size:$base-font-size * 1.15;
+        }
+        ul{margin-bottom: $base-font-size;}
+    }
+}
+
+
+footer.back2top{
+    text-align: right; margin-bottom: $base-font-size;
+
+    a{
+        padding: 4px 12px; font-size: $base-font-size *0.8; color: white; text-decoration: none; display: inline-block;border-radius: 4px; background-color: $base-sub-col;opacity: 0.8; box-shadow:1px 1px darken($base-sub-col,20%);
+        &:hover{ opacity: 1;}
+        &:active{ box-shadow:none; position:relative;left:1px;top:1px;}
+    }
+}
+
+footer.page-footer{
+  padding:8px ($base-font-size *2) $base-font-size;
+  clear:both;
+  border-top: 4px solid $base-col;
+
+  p.footer-note,
+  p.footer-note a{ font-size:$base-font-size *0.7; }
+  p.copyright{ font-size:$base-font-size *0.7; }
+}
+
+@media all and (max-width: 1000px) {
+  header.page-header h4{width:96%;}
+  .container{width: 100%;}
+  .sidemenu{float: right; width: 33%;}
+  .articles{float: left; width: 67%;}
+
+}
+
+@media all and (max-width: 670px) {
+  body{width:670px;}
+  .sidemenu,.articles{
+      width: 100%;
+      float: none;
+  }
+
+  .sidemenu h1{color:inherit; border-bottom: 4px solid $base-col; margin-bottom: $base-font-size;}
+  .sidemenu li{line-height: 1.4;}
+}

@@ -1,0 +1,24 @@
+---
+layout: default
+title: トップページ
+---
+<div class="sidemenu">{% include sidemenu.html %}</div>
+
+<div class="articles">
+{% assign descend_list = site.articles | sort:"title" | reverse %}{% for article in descend_list %}<article>
+<header>
+    {% if article.eventname-subhead %}<h1 class="subtitle">{{article.eventname-subhead}}</h1>{% endif %}
+    <h1 id="{{article.title}}">{% if article.link %}<a href="{{article.link}}" target="_blank">{% endif %}{{article.eventname}}{% if article.link %}</a>{% endif %}</h1>
+
+    {% if article.eventname-subfoot %}<h1 class="subtitle">{{article.eventname-subfoot}}</h1>{% endif %}
+    <h4>{{ article.date | date: "%Y.%m.%d (%a)" }}</h4>
+</header>
+<section>
+    {{ article.content }}
+</section>
+<footer class="back2top">
+    <p><a href="#">▲ページ上部へ</a></p>
+</footer>
+</article>{% endfor %}
+
+</div>

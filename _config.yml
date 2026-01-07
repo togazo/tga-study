@@ -1,0 +1,23 @@
+ github: [metadata]
+ encoding: UTF-8
+
+ title: とがぞののスタディ（勉強会等資料集）
+ description: このサイトの管理人が、勉強会やLT、講話などで使用した資料や関連資料をザックリとまとめたページです。元資料のライセンスおよび著作権法の「引用」の範囲内で転載（引用）可です。記事のシェアも歓迎です。
+
+ twitter_username: togazo
+ github_username:  togazo
+
+ markdown: kramdown
+
+ collections:
+    articles:
+        output: true
+
+# Exclude from processing.
+ exclude:
+   - Gemfile
+   - Gemfile.lock
+   - vendor/bundle/
+   - vendor/cache/
+   - vendor/gems/
+   - vendor/ruby/
